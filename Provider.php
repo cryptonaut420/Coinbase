@@ -36,7 +36,7 @@ class Provider extends AbstractProvider
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()->get(
-            'https://api.coinbase.com/v1/users/self', [
+            'https://api.coinbase.com/v2/user', [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
             ],
@@ -51,8 +51,8 @@ class Provider extends AbstractProvider
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'   => $user['user']['id'], 'nickname' => $user['user']['username'],
-            'name' => null, 'email' => $user['user']['email'], 'avatar' => null,
+            'id'   => $user['data']['id'], 'username' => $user['data']['username'], 'nickname' => null,
+            'name' => $user['data']['name'], 'email' => null, 'avatar' => null,
         ]);
     }
 
