@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Coinbase;
+namespace Cryptonaut420\Coinbase;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
