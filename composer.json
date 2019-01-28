@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/coinbase",
+    "name": "cryptonaut420/coinbase",
     "description": "Coinbase OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
